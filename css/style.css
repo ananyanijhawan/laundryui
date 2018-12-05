@@ -13902,9 +13902,9 @@ input:focus {
         height: 28px;
         margin: auto;
         vertical-align: middle; }
-    .navbar.default-layout .navbar-brand-wrapper .brand-logo-mini {
+    .navbar.default-layout .navbar-brand-wrapper  {
       display: none; }
-      .navbar.default-layout .navbar-brand-wrapper .brand-logo-mini img {
+      .navbar.default-layout .navbar-brand-wrapper  img {
         width: calc(70px - 50px);
         max-width: 100%;
         height: 28px;
@@ -13996,7 +13996,7 @@ input:focus {
       width: 75px; }
       .navbar.default-layout .navbar-brand-wrapper .brand-logo {
         display: none; }
-      .navbar.default-layout .navbar-brand-wrapper .brand-logo-mini {
+      .navbar.default-layout .navbar-brand-wrapper  {
         display: inline-block; }
   .navbar-collapse {
     display: flex;
@@ -16313,4 +16313,9 @@ Custom CSS
 
 .bg-washer {
     background-color: #00BFFF!important;
+}
+
+@media (max-width: 991px)
+.navbar.default-layout .navbar-brand-wrapper  {
+    display: inline-block;
 }

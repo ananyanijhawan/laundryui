@@ -49,16 +49,16 @@
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
               <i class="mdi mdi-bell"></i>
-              <span class="count">1</span>
+              <span id="notif3" class="count">1</span>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
               <a class="dropdown-item">
-                <p class="mb-0 font-weight-normal float-left">You have an unread notification
+                <p id="notif2" class="mb-0 font-weight-normal float-left">You have an unread notification
                 </p>
                 <span class="badge badge-pill badge-warning float-right">View all</span>
               </a>
               <div class="dropdown-divider"></div>
-              <a id="notif" onclick="document.getElementById('notif').style.background = 'white'" style="background-color:#e5e5e5;cursor:pointer" class="dropdown-item preview-item">
+              <a id="notif" onclick="notificationFunc()" style="background-color:#e5e5e5;cursor:pointer;font-weight:bold;" class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-warning">
                     <i class="mdi mdi-alert-circle-outline mx-0"></i>
@@ -435,6 +435,15 @@
   </div>
   <!-- container-scroller -->
 
+    
+  <script>
+    function notificationFunc() {
+      document.getElementById('notif').style.background = 'white';
+      document.getElementById('notif').style.fontWeight = '400';
+      document.getElementById('notif2').innerHTML = 'You have no unread notifications';
+      document.getElementById('notif3').innerHTML = '0';
+    }
+  </script> 
   <!-- plugins:js -->
   <script src="vendors/js/vendor.bundle.base.js"></script>
   <script src="vendors/js/vendor.bundle.addons.js"></script>
